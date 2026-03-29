@@ -17,20 +17,20 @@ A high-performance, reusable Angular component designed for precision countdowns
 
 ---
 
-### 🛠 How it Works: Reactive Accuracy
+### How it Works: Reactive Accuracy
 Unlike standard `setInterval` counters, this timer uses **Timestamp Synchronization**. 
 Even if the browser lags or the tab is backgrounded, the clock stays perfectly synced with the system time.
 
 $$\text{Time Remaining} = \text{Deadline Timestamp} - \text{Current Timestamp}$$
 
 ---
-### ⚡ Performance Optimizations
+### Performance Optimizations
 - **NgZone.runOutsideAngular**: The 100ms interval runs outside the Angular zone to prevent global change detection churn.
 - **Angular Signals**: UI updates are granular; only the time string and progress bar re-render.
 - **CSS Animations**: The "Warning" pulse is handled by the GPU, keeping the main thread free.
 ---
 
-### 🚀 Usage
+### Usage
 #### 1. Integration
 Import the standalone component into your parent component:
 
