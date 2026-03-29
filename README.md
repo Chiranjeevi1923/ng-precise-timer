@@ -44,8 +44,8 @@ import { PreciseTimerComponent } from './components/precise-timer/precise-timer.
 })
 
 <app-precise-timer 
-  [durationSeconds]="secondsLeft()"
-  [isLoading]="isLoading()"
+  [durationSeconds]="75"
+  [isLoading]="false"
   [warningThresholdSeconds]="30"
   (onTimerFinish)="handleTimeout()">
 </app-precise-timer>
