@@ -1,0 +1,24 @@
+<div class="timer-container" [class.times-up]="isExpired()">
+    <div class="timer-wrapper">
+        @if (isLoading) {
+        <div class="skeleton-card">
+            <div class="shimmer"></div>
+            <p>Loading...</p>
+        </div>
+        } @else if (!isExpired()) {
+        <div class="timer-card" [class.warning]="isWarning()">
+            <span class="label">REMAINING TIME</span>
+            <div class="time-value">{{ displayTime() }}</div>
+            <div class="progress-bg">
+                <div class="progress-bar" [style.width.%]="progress()"></div>
+            </div>
+        </div>
+        } @else {
+        <div class="alert-card">
+            <div class="icon">⚠️</div>
+            <h3>Time's Up</h3>
+            <p>Your time has run out.</p>
+        </div>
+        }
+    </div>
+</div>

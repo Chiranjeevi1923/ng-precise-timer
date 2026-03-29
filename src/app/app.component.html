@@ -1,0 +1,8 @@
+<div class="precise-timer-container">
+    <app-precise-timer 
+      [durationSeconds]="secondsLeft()"
+      [isLoading]="isLoading()"
+      [warningThresholdSeconds]="30"
+      (onTimerFinish)="handleTimeout()">
+    </app-precise-timer>
+</div>
